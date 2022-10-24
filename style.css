@@ -1,0 +1,361 @@
+:root{
+	--galaxy: #000020;
+	--ocean: #87CEFA;
+	--pangea: #F5BD90;
+	--northAmerica: #BDB76B;
+	--southAmerica: #9ACD32;
+	--europe: #FFA500;
+	--asia: #FF6347;
+	--africa: #FFD700;
+	--oceania: #7B68EE;
+	--antartica: #FFFAFA;
+
+}
+body{
+	font-family:'Cinzel', serif ;
+	height: 100vh;
+}
+header{
+	height: 10%;
+	background-color: #fffff0;
+}
+.fragmentation , .approximate_dates{
+	display: none;
+}
+
+.pangea , .first{
+	display: inherit;
+}
+
+
+main{
+	background-color: var(--galaxy);
+	height: 100%;
+}
+
+.All_continents{
+	position: absolute;
+	display: grid;
+	grid-template-areas: 
+		"europe europe europe"
+		"north-america asia asia"
+		"south-america africa africa"
+		"antartica antartica oceania";
+	justify-items: center;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-template-rows: 1fr 1fr 1fr 1fr;
+	top: 20%;
+	height: 70%;
+	width: 100%;
+	margin: 120px;
+	border-radius: 300px;
+	background-color: var(--ocean);
+	margin:auto auto;
+}
+.Pangea{
+	position: absolute;
+	z-index: 1;
+	font-size: 3em;
+	text-transform: uppercase;
+	transform: rotate(274deg);
+	align-self: center;
+}
+.Laurasia, .Gondwana{
+	display: none;
+
+}
+.North_America{
+	grid-area: north-america;
+	grid-column: 2;
+	grid-row: span 2;
+	position: relative;
+	left: 50px;
+	text-align: center;
+	width: 80%;
+	height: 90%;	
+
+}
+.South_America{
+	grid-area: south-america;
+	grid-column: 2/4;
+	position: relative;
+	top: -50px;
+	left: -35px;
+	text-align: center;
+	width: 50%;
+	height: 100%;
+}
+.Europe{
+	grid-area: europe;
+	position: absolute;
+    right: 35px;
+    top: 7px;
+	text-align: center;
+	width: 25%;
+	height: 40%;
+}
+.Asia{
+	grid-area: asia;
+	grid-row: span 2;
+    grid-column: 3;
+    position: relative;
+    top: 13px;
+	text-align: center;
+	width: 140%;
+	height: 60%;
+}
+.Oceania{
+	grid-area: oceania;
+	position: absolute;
+	bottom: 30px;
+	text-align: center;
+	width: 60%;
+	height: 60%;
+}
+.Africa{
+	grid-area: africa;
+	grid-column: 1/5;
+	grid-row: 3;
+	position: relative;
+    left: -15px;
+	text-align: center;
+	width: 40%;
+	height: 110%;
+}
+.Antartica{
+	position: absolute;
+	left: 70%;
+	grid-area: antartica;
+	text-align: center;
+	width: 50%;
+	height: 50%;
+}
+
+.continents{
+	background-color: var(--pangea);
+	font-size: 0px;
+	border-radius: 40%;
+
+} 	
+
+@media screen and (min-width: 500px){
+	header{
+		background-image: url(triassic.jpeg);
+
+	}
+	.All_continents{
+		height: 70%;
+		width: 90%;
+		margin: 0px 30px;
+	}
+	
+	.fragmentation , .approximate_dates{
+		display: none;
+	}
+	.triassic , .second{
+		display: inherit;
+	}
+	.North_America{
+		position: initial;
+		height: 65%;
+		margin-top: 10px;
+	}
+	.Africa{
+		grid-column: 2/6;
+		bottom: 80px;
+		height: 180%;
+		width: 35%;
+	}
+	.South_America{
+		grid-column: 2/4;
+		grid-row: 3/5;
+	}
+	.Antartica{
+		left: 90%;
+		bottom: 5px;
+	}
+	.Oceania{
+		grid-column: 2/4;
+	}
+	.Pangea{
+		display: none;
+	}
+	.Laurasia{
+		display: initial;
+		position: absolute;
+		top: 45px;
+		z-index: 1;
+		font-size: 2em;
+		letter-spacing: 4px;
+		text-transform: uppercase;
+	}
+	.Gondwana{
+		display: initial;
+		position: absolute;
+		grid-row: 3;
+		grid-column: 1;
+	    top: 25px;
+    	transform: rotate(-60deg);
+		z-index: 1;
+		font-size: 2em;
+		text-transform: uppercase;
+	}
+}
+
+@media screen and (min-width: 620px){
+	.All_continents{
+		height: 70%;
+		width: 70%;
+		margin: 0px 120px;
+	}
+	.fragmentation , .approximate_dates{
+		display: none;
+	}
+	.jurassic , .third{
+		display: inherit;
+	}
+	.All_continents{
+		height: 65%;
+		grid-column-gap: 15px;
+    	grid-row-gap: 10px;
+	}
+		.Asia{
+		top: 45px;
+	}
+	.Europe{
+		transform: rotate(45deg);
+		top: 30px;
+	}
+	.North_America{
+		height: initial;
+		transform: rotate(37deg);
+	}
+	.South_America{
+    	height: 85%;
+    	top: -20px;
+    	transform: rotate(-30deg);
+    	left: initial;
+    	right: 80px;
+	}
+	.Africa{
+		width: 30%;
+		left: -65px;
+	}
+	.Oceania{
+		grid-column: 3/5;
+		grid-row: 3;
+		width: 40%;
+		height: 50%;
+	}
+	.Antartica{
+		bottom: 20px;
+	}
+}
+@media screen and (min-width: 750px){
+	.All_continents{
+		height: 70%;
+		width: 70%;
+		margin: 0px 120px;
+	}
+		.fragmentation , .approximate_dates , .Laurasia , .Gondwana{
+		display: none;
+	}
+	.cretaceous , .fourth{
+		display: inherit;
+	}
+	.continents{
+		border: solid 1px;
+
+	}
+	.North_America{
+		position: relative;
+		left: -30px;
+	}
+	.Europe{
+		display: none;
+	}
+	.Asia{
+		left: -10px;
+	}
+	.Africa{
+		bottom: 70px;
+	}
+	.South_America{
+		right: 150px;
+		width: 40%;
+	}
+	.Antartica{
+		bottom: 5px;
+		left: 75%;
+		height: 60%;
+		width: 65%;
+	}
+	.Oceania{
+		grid-column: 3/6;
+	}
+}
+@media screen and (min-width: 850px){
+	.All_continents{
+		height: 70%;
+		width: 80%;
+		margin:0px 100px;
+	}
+	.fragmentation , .approximate_dates , .Laurasia , .Gondwana{
+		display: none;
+	}
+	.today , .now{
+		display: inherit;
+	}
+	.North_America{
+		grid-column: 1;
+		left: 60px;
+		background-color: var(--northAmerica);
+	}
+	.South_America{
+		grid-column: 2;
+		top: -43px;
+		width: 50%;
+		right: 90px;
+		background-color:var(--southAmerica);
+	}
+	.Asia{
+		grid-column: 3;
+		 left: 108px;
+	    width: 135%;
+	    height: 205px;
+	    background-color: var(--asia);
+	}
+	.Europe{
+		display: initial;
+		transform: initial;
+		height: 100%;
+		width: 21%;
+		right: 67px;
+		top: 65px;
+		background-color: var(--europe);
+	}
+	.Africa{
+		height: 165%;
+		width: 23%;
+		background-color: var(--africa);
+	}
+	.Antartica{
+		    bottom: 0px;
+    left: 53%;
+    height: 23%;
+    width: 102%;
+    background-color: var(--antartica);
+	}
+	.Oceania{
+		width: 25%;
+    height: 30%;
+    grid-column: 3;
+    bottom: 50px;
+    background-color: var(--oceania);
+	}
+
+	.continents{
+		font-size: 1rem;
+		font-weight: 700;
+	}
+}
